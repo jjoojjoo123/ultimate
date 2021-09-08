@@ -235,7 +235,8 @@ public class ThreadStatementsExecutor extends StatementsExecutor<ThreadState> {
 		 * Skip the havoc statement because this statement has no effect on 
 		 * a program that has no nondeterministic choice.
 		 * However, the execution of havoc statements should be implemented if the input C program
-		 * has nondeterministic values, i.e., the value decided by the SVcomp convention: __VERIFIER_nondet_X()
+		 * has nondeterministic values, i.e., non-initialized local variables or
+		 * the value decided by the SVcomp convention: __VERIFIER_nondet_X().
 		 * see https://sv-comp.sosy-lab.org/2021/rules.php
 		 * 
 		 * All states with different possible values should be generated (in an on-the-fly way) 
